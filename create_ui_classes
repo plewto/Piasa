@@ -1,0 +1,15 @@
+#! /usr/bin/sh
+#
+# Creates Python classes from ui files in resources
+#
+
+SRC=~/dev/Piasa/resources
+DST=~/dev/Piasa/piasa/ui
+
+pyside2-uic -o $DST/timecalc_form.py $SRC/time_calculator_form.ui
+pyside2-uic -o $DST/beat_panel.py $SRC/beat_panel.ui
+pyside2-uic -o $DST/tune_panel.py $SRC/tune_panel.ui
+pyside2-uic -o $DST/transpose_panel.py $SRC/transpose_panel.ui
+pyside2-uic -o $DST/scale_panel.py $SRC/scale_panel.ui
+pyside2-uic -o $DST/chord_panel.py $SRC/chord_panel.ui
+

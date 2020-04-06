@@ -1,0 +1,14 @@
+
+*.pyc
+# Ignore temp emacs files
+*backup*
+*~
+[#]*[#]
+.\#*
+
+.gradle/
+.idea/
+/build
+/libs
+/gradle
+
