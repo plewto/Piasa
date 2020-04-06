@@ -6,9 +6,9 @@ and a string representation.  Some keynumbers have two string representations su
 
 The key names have the form: R[#|b][n]
 
-Where R is the root (white) key, one of the upper case letters A B C D E F or G.
+Where R is the root (white) key, one of the upper case letters: A B C D E F or G.
 
-The optional # and b characters indicate an sharp are flat respectively.
+The optional # and b characters indicate a sharp or flat respectively.
 
 The optional n is an octave between 0 and 10.  If not specified the octave is 0.
 """

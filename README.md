@@ -11,7 +11,7 @@ present day Alton Illinois.
 
 ## Features
 
-The program has 4 tabs:
+The program presents the following 6 tabs:
 
 1. Chord dictionary
 2. Scale dictionary
