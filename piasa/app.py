@@ -20,7 +20,7 @@ class Piasa(QMainWindow):
             raise Exception("Piasa application already exists")
         else:
             QMainWindow.__init__(self)
-            self.resize(560, 800)
+            self.resize(635, 800)
             self.setWindowTitle("Piasa Producers Calculator")
             self.tab_pane = QTabWidget()
             self.setCentralWidget(self.tab_pane)
