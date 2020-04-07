@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>302</width>
-    <height>286</height>
+    <width>789</width>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>281</width>
-     <height>261</height>
+     <width>621</width>
+     <height>331</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -31,8 +31,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>81</width>
       <height>20</height>
      </rect>
@@ -47,134 +47,313 @@
      <string>Transpose</string>
     </property>
    </widget>
-   <widget class="QWidget" name="formLayoutWidget">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>243</width>
-      <height>186</height>
+      <x>10</x>
+      <y>40</y>
+      <width>601</width>
+      <height>281</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout">
-     <property name="fieldGrowthPolicy">
-      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-     </property>
+    <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="label_2">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QLineEdit" name="line_edit_transpose">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>0 steps  0 cents</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QRadioButton" name="radio_frequency">
        <property name="text">
-        <string>Starting</string>
+        <string>Frequency </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLineEdit" name="line_edit_freq_ratio">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>1.00</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Required</string>
+        <string>Initial</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Scale</string>
+     <item row="1" column="4">
+      <widget class="QDoubleSpinBox" name="dspin_time0">
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="suffix">
+        <string> sec</string>
+       </property>
+       <property name="decimals">
+        <number>5</number>
+       </property>
+       <property name="minimum">
+        <double>0.000050000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
        </property>
       </widget>
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="label_5">
        <property name="text">
+        <string>Ratio</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
         <string>Transpose</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QDoubleSpinBox" name="dspin_starting">
-       <property name="toolTip">
-        <string>Initial frequency</string>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Final</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Difference</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLineEdit" name="line_edit_freq_diff">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>0.00 hz</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QDoubleSpinBox" name="dspin_time1">
+       <property name="readOnly">
+        <bool>false</bool>
        </property>
        <property name="suffix">
-        <string> hz</string>
+        <string> sec</string>
        </property>
        <property name="decimals">
-        <number>4</number>
+        <number>5</number>
        </property>
        <property name="minimum">
-        <double>0.000100000000000</double>
+        <double>0.000050000000000</double>
        </property>
        <property name="maximum">
-        <double>1000000.000000000000000</double>
+        <double>20000.000000000000000</double>
        </property>
        <property name="value">
         <double>1.000000000000000</double>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QDoubleSpinBox" name="dspin_required">
-       <property name="toolTip">
-        <string>Required frequency</string>
-       </property>
+     <item row="2" column="3">
+      <widget class="QDoubleSpinBox" name="dspin_freq1">
        <property name="suffix">
         <string> hz</string>
        </property>
        <property name="decimals">
-        <number>4</number>
+        <number>5</number>
        </property>
        <property name="minimum">
-        <double>0.000100000000000</double>
+        <double>0.000050000000000</double>
        </property>
        <property name="maximum">
-        <double>1000000.000000000000000</double>
+        <double>20000.000000000000000</double>
        </property>
        <property name="value">
         <double>1.000000000000000</double>
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="line_edit_scale">
-       <property name="toolTip">
-        <string>Ratio required / starting</string>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="dspin_freq0">
+       <property name="suffix">
+        <string> hz</string>
        </property>
-       <property name="readOnly">
-        <bool>true</bool>
+       <property name="decimals">
+        <number>5</number>
        </property>
-       <property name="placeholderText">
-        <string>1.000</string>
+       <property name="minimum">
+        <double>0.000050000000000</double>
+       </property>
+       <property name="maximum">
+        <double>20000.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="line_edit_transpose">
-       <property name="toolTip">
-        <string>Transpose amount in steps and cents</string>
-       </property>
+     <item row="3" column="4">
+      <widget class="QLineEdit" name="line_edit_time_diff">
        <property name="readOnly">
         <bool>true</bool>
        </property>
        <property name="placeholderText">
-        <string>0 steps 0 cents</string>
+        <string>0.00 sec</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QLineEdit" name="line_edit_time_ratio">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>1.00</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QRadioButton" name="radio_time">
+       <property name="text">
+        <string>Time </string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QPushButton" name="button_reset">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>351</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>331</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="2" column="2">
+      <widget class="QLineEdit" name="line_edit_lambda">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>343 m</string>
        </property>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="label_9">
        <property name="text">
-        <string>Diff</string>
+        <string>Wave Length</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="line_edit_diff">
-       <property name="toolTip">
-        <string>Differance abs(required - start)</string>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Frequency</string>
        </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Speed of Sound</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="line_edit_freq0_copy">
        <property name="readOnly">
         <bool>true</bool>
        </property>
        <property name="placeholderText">
-        <string>0.000</string>
+        <string>1.00</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QDoubleSpinBox" name="dspin_speed">
+       <property name="suffix">
+        <string> m/s</string>
+       </property>
+       <property name="minimum">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>3300.000000000000000</double>
+       </property>
+       <property name="value">
+        <double>343.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QRadioButton" name="radio_metric">
+       <property name="text">
+        <string>Meters</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QRadioButton" name="radio_imperial">
+       <property name="text">
+        <string>Feet</string>
        </property>
       </widget>
      </item>
